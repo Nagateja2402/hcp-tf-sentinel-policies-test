@@ -1,20 +1,22 @@
-policy "s3-block-public-access-account-level" {
-  source = "https://registry.terraform.io/v2/policies/harinimhc/sample-beta/1.0.0/policy/s3-block-public-access-account-level.sentinel?checksum=sha256:c76848dc2105f124f3d5a158b0800834441e76931557655d4890c90208374b5c"
+policy "rds-encryption-at-rest-enabled" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/cis-aws-rds-terraform/1.0.0/policy/rds-encryption-at-rest-enabled.sentinel?checksum=sha256:51a364709f94ed7c57b10379e62ba2f8d7cd817bf5aae05566b170c493e95743"
   enforcement_level = "advisory"
 }
 
-module "tfplan-functions" {
-  source = "https://registry.terraform.io/v2/policies/harinimhc/sample-beta/1.0.0/policy-module/tfplan-functions.sentinel?checksum=sha256:9bbb1ae1ecdfe69508f9de6c701d158430601243a88269acb2c65fa5743401fb"
+policy "rds-minor-version-upgrade-enabled" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/cis-aws-rds-terraform/1.0.0/policy/rds-minor-version-upgrade-enabled.sentinel?checksum=sha256:b3c2957a71992b878940f31a7bc6b904ab873d6732b16384cb16dcabce22645e"
+  enforcement_level = "advisory"
 }
 
-module "tfconfig-functions" {
-  source = "https://registry.terraform.io/v2/policies/harinimhc/sample-beta/1.0.0/policy-module/tfconfig-functions.sentinel?checksum=sha256:af4412b799d270e9b815215443a487d7aee5954dd7174f49c99e29fe5535bcd7"
+policy "rds-public-access-disabled" {
+  source = "https://registry.terraform.io/v2/policies/hashicorp/cis-aws-rds-terraform/1.0.0/policy/rds-public-access-disabled.sentinel?checksum=sha256:3a376ca9c8b2c98095d6a1dc145071bef53cf6d75dcbe23a1d00edb3f40617c7"
+  enforcement_level = "advisory"
 }
 
 module "report" {
-  source = "https://registry.terraform.io/v2/policies/harinimhc/sample-beta/1.0.0/policy-module/report.sentinel?checksum=sha256:54111b6599245a0d1e264dfa431cbdb7c4a2ed238b17b915b4d987e6c00c9c7c"
+  source = "https://registry.terraform.io/v2/policies/hashicorp/cis-aws-rds-terraform/1.0.0/policy-module/report.sentinel?checksum=sha256:e8422be2bf132524ef264934609cbfbf4846e77936003448a69747330fcfe9ba"
 }
 
 module "tfresources" {
-  source = "https://registry.terraform.io/v2/policies/harinimhc/sample-beta/1.0.0/policy-module/tfresources.sentinel?checksum=sha256:1e6fb1a9307339f11061e65a92b25d876a23212bf9ddf615cb6693215061bb5c"
+  source = "https://registry.terraform.io/v2/policies/hashicorp/cis-aws-rds-terraform/1.0.0/policy-module/tfresources.sentinel?checksum=sha256:54edaac2a209f55d117f92291baae78d400fd47d94336e614f2cadf6b38bea99"
 }
